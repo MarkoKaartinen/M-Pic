@@ -1,0 +1,89 @@
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	background: #AED6EE;
+}
+
+#page {
+	width:800px;
+	margin:0 auto;
+	padding:40px 0;
+}
+
+#header {
+	background: #416073;
+	height: 100px;
+}
+
+#header .head {
+	height: 60px;
+	float:left;
+	background: #D4EF9F;
+	padding:20px 50px 20px 20px;
+}
+
+#header .head .txt {
+	font-size: 30px;
+	line-height: 40px;
+}
+
+#header #navi {
+	float:right;
+	padding:5px;
+	margin:5px 0;
+}
+
+#header #navi li {
+	list-style: none;
+	display: inline;
+	margin-right: 10px;
+}
+
+#header #navi a {
+	color:#99CAEA;
+	text-decoration: none;
+	padding:5px 8px;
+	cursor: pointer;
+}
+
+#header #navi a:hover {
+	background: #2D4655;
+}
+
+#content {
+	margin:20px 0;
+	padding:10px;
+	background: #FFFFFF;
+}
+
+#footer {
+	padding:15px 0;
+	background: #FFFFFF;
+	text-align: center;
+	width: 100%;
+}
+
+.clear {
+	clear: both;
+}
+
+ul, li, ol {
+	margin-left:10px;
+}
+
+#setform input[type="text"]{
+	width:200px;
+}
+
+/* MarkoEditor tyylit */
+.markoEditor img {
+	background: #EEEEEE;
+	border:1px solid #CCCCCC;
+	padding:2px;
+	margin-right: 2px;
+	cursor: pointer;
+}
