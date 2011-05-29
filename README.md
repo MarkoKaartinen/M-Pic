@@ -11,8 +11,8 @@ Also I will create test enviroment to http://m-pic.info - it is not ready yet, b
 [GNU General Public License version 3 / GPLv3](http://www.gnu.org/licenses/gpl-3.0.html)
 
 ### Links ###
-Project site: http://m-pic.info
-jQuery site: http://jquery.com/
-Fancybox site: http://fancybox.net
-FamFamFam icons: http://famfamfam.com/lab/icons/silk/
-Marko's personal sites: http://markokaartinen.net & http://markokaartinen.info
+* Project site: http://m-pic.info
+* jQuery site: http://jquery.com/
+* Fancybox site: http://fancybox.net
+* FamFamFam icons: http://famfamfam.com/lab/icons/silk/
+* Marko's personal sites: http://markokaartinen.net & http://markokaartinen.info
