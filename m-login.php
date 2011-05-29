@@ -17,7 +17,7 @@ if($log == "try"){
 }
 if($log == "out"){
 	if(loggaaUlos()){
-		echo "Logged out!";
+		echo "Logged out!<br />";
 		echo 'You\'ll be redirected in about 5 secs. If not, click <a href="index.php">here</a>.';
 		ohjaa("index.php", 5);
 
