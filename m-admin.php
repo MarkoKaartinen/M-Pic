@@ -1,3 +1,4 @@
+<?php if(tarkistaLogin()){ ?>
 <h1>M-Pic management</h1>
 <div id="admin_menu"><a href="index.php?p=admin">Admin index</a> - <a href="index.php?p=admin&amp;do=folders">Folders</a> - <a href="index.php?p=admin&amp;do=settings">Settings</a></div>
 
@@ -29,6 +30,17 @@ if($do == "folders"){
 			echo "Folder added";
 		}else{
 			echo "FAIL!";
+		}
+	}elseif($task == "del"){
+		$f = $_GET['f'];
+		$path = getFolderPath($f);
+		echo "<h2>Delete a folder</h2>";
+		$check = $_GET['c'];
+		if($check == ""){
+			echo "Do you really want to delete this folder?<br />Everything inside it will be deleted!<br />";
+			echo "<br /><a href=\"index.php?p=admin&amp;do=folders&amp;task=del&amp;f=$f&amp;check=do\">Yes. I'm sure</a> // <a href=\"index.php?p=admin&do=folders\">NO! Do not do that!</a>";
+		}elseif($check == "do"){
+			//let's continue this later - sry guys
 		}
 	}
 }
@@ -71,3 +83,5 @@ if($do == "settings"){
 	}
 }
 ?>
+
+<?php }else{ include("m-404.php"); }

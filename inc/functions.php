@@ -82,7 +82,7 @@ function folderManagementList(){
 	$res = mysql_query($sql);
 	echo "<ul>";
 	while($rivi = mysql_fetch_object($res)){
-		echo '<li>'.$rivi->f_nimi.' ('.getFolderPath($rivi->f_id).')';
+		echo '<li>'.$rivi->f_nimi.' [<a href="index.php?p=admin&amp;do=folders&amp;task=del&amp;f='.$rivi->f_id.'">x</a>]';
 		subfolderManagementList($rivi->f_id);
 		echo '</li>';
 	}
@@ -94,7 +94,7 @@ function subfolderManagementList($id){
 	$res = mysql_query($sql);
 	echo "<ul>";
 	while($rivi = mysql_fetch_object($res)){
-		echo '<li>'.$rivi->f_nimi.' ('.getFolderPath($rivi->f_id).')';
+		echo '<li>'.$rivi->f_nimi.' [<a href="index.php?p=admin&amp;do=folders&amp;task=del&amp;f='.$rivi->f_id.'">x</a>]';
 		if(mysql_num_rows(mysql_query("SELECT * FROM folders WHERE f_parent = ".$rivi->f_id)) > 0){
 			subfolderManagementList($rivi->f_id);
 		}
@@ -102,7 +102,6 @@ function subfolderManagementList($id){
 	}
 	echo "</ul>";
 }
-
 
 function listFolders(){
 	$sql = "SELECT * FROM folders WHERE f_parent = 0";
